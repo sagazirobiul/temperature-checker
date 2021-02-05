@@ -4,7 +4,7 @@ document.getElementById('submit').addEventListener('click', function () {
 })
 
 function weatherConditions(cityName) {
-    fetch('http://api.openweathermap.org/data/2.5/weather?q=' + cityName.value + '&appid=f90a0fbfa46435da18777c85dd7bd085&units=metric')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName.value + '&appid=f90a0fbfa46435da18777c85dd7bd085&units=metric')
         .then(response => response.json())
         .then(data => {
             const weatherIcon = data.weather[0].icon;
